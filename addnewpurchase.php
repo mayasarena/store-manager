@@ -49,7 +49,6 @@
 	mysqli_close($connection);
 ?>
 </ol>
-//drop down box for customer info
 <hr>
 <hr>
 <img src="http://www.csd.uwo.ca/~lreid/blendedcs3319/flippedclassroom/four/kids.png" width="216" height="260">

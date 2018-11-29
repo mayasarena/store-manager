@@ -62,14 +62,24 @@ Quantity(positive integer):<input type="text" pattern="\d+" name="quantity"><br>
 <hr>
 
 <!-- part 4 insert a new customer -->
-ADD A PURCHASE:
+ADD A CUSTOMER:
 <p>
 <form action="addnewcustomer.php" method="post">
-Customer id:<input type="text" pattern="\+d" name="customerid"><br>
-Product id:<?php include "productradio.php"?>
-Quantity(positive integer):<input type="text" pattern="\d+" name="quantity"><br>
-<input type="submit" value="Add New Purchase">
+Customer id(2 characters):<input type="text" pattern="[0-9a-zA-Z]{2}" 
+size="2" maxlength="2" name="customerid"><br>
+First Name:<input type="text" pattern="[a-zA-Z]+" size="30" maxlength="30" 
+name="firstname"><br>
+Last Name:<input type="text" pattern="[a-zA-Z]+" size="30" maxlength="30"
+name="lastname"><br>
+City:<input type="text" pattern="[a-zA-Z ]+" size="15" maxlength="15" 
+name="city"><br>
+Phone Number(000-0000):<input type="text" pattern="[0-9]{3}-[0-9]{4}" 
+size="20" maxlength="8" name="phone"><br>
+Agent id(2 characters):<?php include "agentradio.php"?>
+<input type="submit" value="Add New Customer">
 </form>
+
+
 <img src="http://www.csd.uwo.ca/~lreid/blendedcs3319/flippedclassroom/four/kids.png" width="216" height="260">
 </body>
 </html>
