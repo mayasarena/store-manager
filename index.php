@@ -8,12 +8,11 @@
 <body>
 
 
-<?php include "connectdb.php";
-?>
+<?php include "connectdb.php";?>
+<script src="index.js"></script>
 
 <h1>Update Database</h1>
 <!-- part 1 all customer info -->
-<script src="getcustomer.js"></script>
 Customer info:
 <form action="displayproduct.php" method="post">
 <select name="pickacustomer" id="pickacustomer">
@@ -31,7 +30,6 @@ Customer info:
 <hr>
 
 <!-- part 2 drop down for product order -->
-<script src="2ascdesc.js"></script>
 Products:
 <?php include "getproduct.php";?>
 <form action="2displaydesc.php" method="post">
@@ -67,7 +65,7 @@ Quantity(positive integer):<input type="text" pattern="\d+" name="quantity"><br>
 ADD A PURCHASE:
 <p>
 <form action="addnewcustomer.php" method="post">
-Customer id:<input type="text" pattern="
+Customer id:<input type="text" pattern="\+d" name="customerid"><br>
 Product id:<?php include "productradio.php"?>
 Quantity(positive integer):<input type="text" pattern="\d+" name="quantity"><br>
 <input type="submit" value="Add New Purchase">
