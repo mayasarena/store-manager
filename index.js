@@ -3,6 +3,7 @@ window.onload = function(){
 	productOrderDropdown();
 	customerPhoneDropdown();
 	customerDeleteDropdown();
+	customerImageDropdown();
 }
 
 function customerDropdown(){
@@ -27,6 +28,12 @@ function customerDeleteDropdown(){
 	var dropdown4;
 	dropdown4 = document.getElementById("pickacustomer3");
 	dropdown4.addEventListener("change",getStuff);
+}
+
+function customerImageDropdown(){
+	var dropdown5;
+	dropdown5 = document.getElementById("pickacustomer4");
+	dropdown5.addEventListener("change",getStuff);
 }
 
 function getStuff(){

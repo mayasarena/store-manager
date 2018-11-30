@@ -119,6 +119,17 @@ Products that have not been purchased:
 Product id:<?php include "productradio.php"?>
 <input type="submit" value="Get Purchase Info">
 </form>
+<hr>
+
+<!-- bonus part 10 insert customer image -->
+CHANGE CUSTOMER IMAGE:
+<form action="getimage.php" method="post">
+<select name="pickacustomer4" id="pickacustomer4">
+	<option value="0">pick a customer</option>
+	<?php include "5getcustomer.php"?>
+</select>
+</form>
+<hr>
 
 <img src="http://www.csd.uwo.ca/~lreid/blendedcs3319/flippedclassroom/four/kids.png" width="216" height="260">
 </body>
