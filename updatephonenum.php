@@ -1,13 +1,13 @@
+<!DOCTYPE html>
 <?php
-	ob_start();
-	include "getcustomerphone.php";
-	ob_end_clean();
-	echo $whichCustomer;
-	$phonenum=$_POST["phone"];
+	session_start();
+	$phonenum=$_POST['phone'];
 	$updatePhone = 'UPDATE customer SET phonenumber="'.$phonenum.'" WHERE
-	cusID="'.$whichCustomer.'"'; 
+	cusID="'.$_SESSION['customer'].'"'; 
    	if (!mysqli_query($connection, $updatePhone)) {
        		die("Error: update failed" . mysqli_error($connection));
     	}	
 	echo "Phone number succesfully updated to: " . $phonenum;
+	session_unset();
+	session_destroy();
 ?>
