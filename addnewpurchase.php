@@ -15,8 +15,8 @@
 	$whichCustomer= $_POST["customer"];
 	$whichProduct= $_POST["product"];
 	$quantity=$_POST["quantity"];
-	$query1= 'SELECT * FROM purchased WHERE 
-	customerid="'.$whichCustomer.'" AND productid="'.$whichProduct.'"';
+	$query1= 'SELECT * FROM purchases WHERE 
+	cusID="'.$whichCustomer.'" AND prodID="'.$whichProduct.'"';
    	$result=mysqli_query($connection,$query1);
 	if (!$result) {
 		die("database select query failed.");
@@ -24,10 +24,10 @@
 	//checking if customer already bought a product
 	if ($result->num_rows>0){
 		$row=mysqli_fetch_assoc($result);
-   		$newQuantity = intval($row["quantity"]) + $quantity;
+   		$newQuantity = intval($row["Quantity"]) + $quantity;
    		$newQuantity2= (int)$newQuantity;
-   		$query2 = 'UPDATE purchased SET quantity="'.$newQuantity2.'" WHERE
-		customerid="'.$whichCustomer.'" AND productid=
+   		$query2 = 'UPDATE purchased SET Quantity="'.$newQuantity2.'" WHERE
+		cusID="'.$whichCustomer.'" AND prodID=
 		"'.$whichProduct.'"';
    		if (!mysqli_query($connection, $query2)) {
         		die("Error: insert failed" . mysqli_error($connection));
@@ -37,7 +37,7 @@
 		quantity: " .$newQuantity2;
 	}
 	else {
-		$query3 = 'INSERT INTO purchased VALUES("'.$whichCustomer.'",
+		$query3 = 'INSERT INTO purchases VALUES("'.$whichCustomer.'",
 		"'.$whichProduct.'","'.$quantity.'")';	
    		if (!mysqli_query($connection, $query3)) {
         		die("Error: insert failed" . mysqli_error($connection));

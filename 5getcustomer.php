@@ -8,10 +8,8 @@ die("databases query failed.");
 
 while ($row = mysqli_fetch_assoc($result)) {
 	echo "<option value=".$row["cusID"].">". 
-	"customer id: " . $row["cusID"]. " - name: " .
-	$row["firstname"]. " " . $row["lastname"] . " - city: " .
-	$row["city"]. " - phone number: " . $row["phonenumber"]. 
-	" - agent id: " . $row["agentID"]. " </option>";
+	"ID " .$row["cusID"]. ": " . $row["firstname"]. " " 
+	. $row["lastname"] . " </option>";
 }
 mysqli_free_result($result);
 

@@ -7,8 +7,8 @@ die("databases query failed.");
 }
 
 while ($row = mysqli_fetch_assoc($result)) {
-	echo "<input type='radio' name='customer' value=".$row["customerid"].">". 
-	"customer id: " . $row["customerid"]. " - name: " .
+	echo "<input type='radio' name='customer' value=".$row["cusID"].">". 
+	"customer id: " . $row["cusID"]. " - name: " .
 	$row["firstname"]. $row["lastname"]. "<br>";
 }
 mysqli_free_result($result);

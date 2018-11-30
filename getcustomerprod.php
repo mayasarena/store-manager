@@ -2,10 +2,10 @@
  $whichCustomer = $_POST["pickacustomer"]; //get selected museum value from the form
 echo $whichCustomer;
 
- $query = 'SELECT product.productid, description, cost, purchased.quantity 
+ $query = 'SELECT product.prodID, description, cost, purchases.Quantity 
 	FROM 
-	product INNER JOIN purchased ON purchased.productid = 
-	product.productid WHERE purchased.customerid = "'.$whichCustomer.'"'; 
+	product INNER JOIN purchases ON purchases.prodID = 
+	product.prodID WHERE purchases.cusID = "'.$whichCustomer.'"'; 
  $result = mysqli_query($connection, $query);
  if (!$result) {
  die("databases query on products failed. ");
@@ -13,11 +13,11 @@ echo $whichCustomer;
  echo "<ul>"; //put the artwork in an unordered bulleted list
 if ($result->num_rows > 0) {
 	while ($row = mysqli_fetch_assoc($result)){
-		echo "<li>". "product id: " . $row["productid"] . 
+		echo "<li>". "product id: " . $row["prodID"] . 
 		" - description: "
 		. $row["description"] . " - cost: " . $row["cost"] . 
 		" - quantity: "
-		. $row["quantity"] . "</li>";
+		. $row["Quantity"] . "</li>";
 	}
 }
 else{

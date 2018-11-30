@@ -9,9 +9,9 @@ die("databases query failed.");
 echo "<ol>";
 while ($row = mysqli_fetch_assoc($result)) {
 	echo "<li>";
-	echo "product id: " . $row["productid"]. " - description: " .
+	echo "product id: " . $row["prodID"]. " - description: " .
 	$row["description"]. " - cost: " .
-	$row["cost"]. " - quantity: " . $row["quantity"]."</li>";
+	$row["cost"]. " - quantity: " . $row["quantityonhand"]."</li>";
 }
 mysqli_free_result($result);
 echo "</ol>";

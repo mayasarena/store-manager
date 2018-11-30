@@ -11,9 +11,9 @@ echo $whichorder;
  echo "<ul>"; //put the artwork in an unordered bulleted list
 if ($whichorder == "1"){
 	while ($row = mysqli_fetch_assoc($result1)){
-		echo "<li>". "product id: " . $row["productid"] . " - description: "
+		echo "<li>". "product id: " . $row["prodID"] . " - description: "
 		. $row["description"] . " - cost: " . $row["cost"] . " - quantity: "
-		. $row["quantity"] . "</li>";
+		. $row["quantityonhand"] . "</li>";
 	}	
 }
  echo "</ul>"; //end the bulleted list

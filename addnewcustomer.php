@@ -19,7 +19,7 @@
 	$phone=$_POST["phone"];
 	$agentid=$_POST["agentid"];	
 	$customerExists= 'SELECT * FROM customer WHERE 
-	customerid="'.$customerid.'"';
+	cusID="'.$customerid.'"';
    	$customerResult=mysqli_query($connection,$customerExists);
 	if (!$customerResult) {
 		die("database customer query failed.");
@@ -40,7 +40,6 @@
 		$customerid . " firstname:" . $firstname ." last name:" .$lastname.
 		" city:" .$city. " phone:" .$phone. " and agentid:" .$agentid;
    	}
-	mysqli_close($connection);
 ?>
 </ol>
 //drop down box for customer info
