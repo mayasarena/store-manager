@@ -99,12 +99,25 @@ DELETE A CUSTOMER:
 	<?php include "5getcustomer.php"?>
 </select>
 </form>
+<hr>
 
 <!-- part 7 list quantity of objects -->
 <form action="displayquantities.php" method="post">
-Quantity: <input type="text" pattern="[0-9]" 
+Quantity: <input type="text" pattern="[0-9]+" 
 size="11" maxlength="11" name="quantity"><br>
 <input type="submit" value="Get Customers">
+</form>
+<hr>
+
+<!-- part 8 list description of purchased products -->
+Products that have not been purchased:
+<?php include "getnopurchase.php"?>
+<hr>
+
+<!-- part 9 total number of purchases -->
+<form action="displaypurchases.php" method="post">
+Product id:<?php include "productradio.php"?>
+<input type="submit" value="Get Purchase Info">
 </form>
 
 <img src="http://www.csd.uwo.ca/~lreid/blendedcs3319/flippedclassroom/four/kids.png" width="216" height="260">
