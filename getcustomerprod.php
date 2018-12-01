@@ -1,5 +1,5 @@
 <?php
- $whichCustomer = $_POST["pickacustomer"]; //get selected museum value from the form
+ $whichCustomer = $_POST["customerinfo"]; //get selected museum value from the form
 echo $whichCustomer;
 
  $query = 'SELECT product.prodID, description, cost, purchases.Quantity 
