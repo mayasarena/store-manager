@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Assignment3</title>
+	<title>TITLE</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Concert+One" 
+	rel="stylesheet">
 </head>
 <body>
-
-
+<!-- connecting to database and including javascript -->
 <?php include "connectdb.php";?>
 <script src="index.js"></script>
 
-<h1>Update Database</h1>
+<!-- header -->
+<div class="header">
+	<h1>DATABASE</h1>
+  	<div class="header-links">
+  		<a href="/"><button class="btn">
+		<span class="text">link</span></button></a>
+  		<a href="/"><button class="btn yello">
+		<span class="text">link</span></button></a>
+  		<a href="/"><button class="btn gree">
+		<span class="text">link</span></button></a>
+  		<a href="/"><button class="btn blu">
+		<span class="text">link</span></button></a>
+  	</div>
+</div>
+
+
 <!-- part 1 all customer info -->
 Customer info:
 <form action="displayproduct.php" method="post">
