@@ -12,18 +12,16 @@ $result = mysqli_query($connection, $query);
 if (!$result) {//check if query failed
  	die("databases query on failed. ");
 }
-echo "<ul>";
 if ($result->num_rows > 0) {//checking if product has been purchased
 	while ($row = mysqli_fetch_assoc($result)){//iterating to display info
-		echo "<li>". "TOTAL # OF PURCHASES: " . $row["totalpurchased"] . 
+		echo "TOTAL # OF PURCHASES: " . $row["totalpurchased"] . 
 		" - DESCRIPTION: " . $row["description"] . 
-		" - TOTAL $ MADE: " . $row["totalmoney"] . "</li>";
+		" - TOTAL $ MADE: " . $row["totalmoney"];
 	}
 }
 else{//otherwise product has not been purchased
 	echo "This product has not been purchased by anybody.";
 }
-echo "</ul>"; 
 mysqli_free_result($result);
 mysqli_close($connection); //closing connection
 ?>

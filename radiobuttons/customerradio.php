@@ -8,8 +8,11 @@ if (!$result) { // checking if query failed
 }
 
 while ($row = mysqli_fetch_assoc($result)) { // iterating to get all customers
-	echo "<input type='radio' name='customer' value=".$row["cusID"]." required>". 
-	"CUSTOMER ID: " . $row["cusID"]. " - NAME: " .
+	echo "<input type='radio' name='customer' 
+	value=".$row["cusID"]." required>".
+	"<img src='".$row["cusimage"]."' width='15px' height='15px'
+	style='border: 1px solid #1C2833;'>". 
+	" CUSTOMER ID: " . $row["cusID"]. " - NAME: " .
 	$row["firstname"]. " " .$row["lastname"]. "<br>";
 }
 
