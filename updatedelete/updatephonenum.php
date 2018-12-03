@@ -7,7 +7,8 @@
    	if (!mysqli_query($connection, $updatePhone)) {//check if query works
        		die("Error: update failed" . mysqli_error($connection));
     	}	
-	echo "Phone number succesfully updated to: " . $phonenum;
+	echo "<p>Phone number successfully updated to: " . $phonenum;
 	session_unset();//destroy session
 	session_destroy();
+	mysqli_close($connection); //closing connection
 ?>

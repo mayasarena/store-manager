@@ -8,8 +8,9 @@ if (!$result) {//check if query failed
 }
 
 while ($row = mysqli_fetch_assoc($result)){//display phone number
-	echo  "Customer's Current Phone Number:" . $row["phonenumber"];
+	echo  "Customer's Current Phone Number: " . $row["phonenumber"];
 }
 
 mysqli_free_result($result);
+mysqli_close($connection);//closing connection
 ?>

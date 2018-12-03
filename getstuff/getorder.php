@@ -28,9 +28,10 @@ if (!$result2) {
 echo "<ul>"; 
 if ($whichorder == "2"){
 	while ($row = mysqli_fetch_assoc($result2)){//iterating to display products
-		echo "<li>". "PRODUCT ID: " . $row["productid"] . " - DESCRIPTION: "
-		. $row["description"] . " - COST: " . $row["cost"] . " - QUANTITY: "
-		. $row["quantity"] . "</li>";
+		echo "<li>". "PRODUCT ID: " . $row["prodID"] . " - DESCRIPTION: "
+		. $row["description"] . " - COST: " . $row["cost"] 
+		. " - QUANTITY: "
+		. $row["quantityonhand"] . "</li>";
 	}	
 }
 echo "</ul>"; 
@@ -45,9 +46,10 @@ if (!$result3) {
 echo "<ul>";
 if ($whichorder == "3"){
 	while ($row = mysqli_fetch_assoc($result3)){//iterating to display products
-		echo "<li>". "PRODUCT ID: " . $row["productid"] . " - DESCRIPTION: "
-		. $row["description"] . " - COST: " . $row["cost"] . " - QUANTITY: "
-		. $row["quantity"] . "</li>";
+		echo "<li>". "PRODUCT ID: " . $row["prodID"] . " - DESCRIPTION: "
+		. $row["description"] . " - COST: " 
+		. $row["cost"] . " - QUANTITY: "
+		. $row["quantityonhand"] . "</li>";
 	}	
 }
 echo "</ul>"; //end the bulleted list
@@ -62,9 +64,10 @@ if (!$result4) {
 echo "<ul>"; 
 if ($whichorder == "4"){
 	while ($row = mysqli_fetch_assoc($result4)){//iterating to display products
-		echo "<li>". "PRODUCT ID: " . $row["productid"] . " - DESCRIPTION: "
-		. $row["description"] . " - COST: " . $row["cost"] . " - QUANTITY: "
-		. $row["quantity"] . "</li>";
+		echo "<li>". "PRODUCT ID: " . $row["prodID"] . " - DESCRIPTION: "
+		. $row["description"] . " - COST: " . $row["cost"] 
+		. " - QUANTITY: "
+		. $row["quantityonhand"] . "</li>";
 	}	
 }
 echo "</ul>"; 

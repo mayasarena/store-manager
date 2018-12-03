@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Assignment 3</title>
+	<title>Add New Image</title>
 	<link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
-<?php include "connectdb.php";?> <!-- connecting to database -->
  
 <!-- header -->
 <div class="header">
-        <h1>DATABASE</h1>
+        <h1>DATABASES</h1>
         <div class="header-links">
                 <a href="../#home"><button class="btn">
                 <span class="text">home</span></button></a>
@@ -22,7 +21,8 @@
         </div>
 </div>
 
-<center><h2>Add a customer image:</h2></center>
+<div class="flex-container">
+<center><h2>Add a customer image:</h2></center></div>
 <div style="background-color: #ffbf00; opacity: 0.7; text-align: center; 
 padding: 40px; width: 200px; margin: 0 auto;">
 <!-- form to get image url -->
@@ -35,6 +35,9 @@ padding: 40px; width: 200px; margin: 0 auto;">
 <!-- if url is set, run update image script -->
 <?php
 	if (isset($_POST['image'])){
+		//connecing to db
+		include "connectdb.php";
+		//php script for inserting image
 		include "../addinsert/insertimage.php";
 	}
 ?>

@@ -1,12 +1,14 @@
+//on window load, run all these functions
 window.onload = function(){
 	customerDropdown();
 	productOrderDropdown();
 	customerPhoneDropdown();
 	customerDeleteDropdown();
 	customerImageDropdown();
-	alert("everything should be working");
 }
 
+//dropdown menus for various things... 
+//dropdown for customer info
 function customerDropdown(){
 	var dropdown1;
 	dropdown1 = document.getElementById("pickacustomer");
@@ -15,6 +17,7 @@ function customerDropdown(){
 	}
 }
 
+//dropdown for product order (ascending, descending)
 function productOrderDropdown(){
 	var dropdown2;
 	dropdown2 = document.getElementById("pickorder");
@@ -23,6 +26,7 @@ function productOrderDropdown(){
 	}
 }
 
+//dropdown for updating customer phone number
 function customerPhoneDropdown(){
 	var dropdown3;
 	dropdown3 = document.getElementById("pickacustomer2");
@@ -31,6 +35,7 @@ function customerPhoneDropdown(){
 	}
 }
 
+//dropdown for deleting a customer
 function customerDeleteDropdown(){
 	var dropdown4;
 	dropdown4 = document.getElementById("pickacustomer3");
@@ -39,6 +44,7 @@ function customerDeleteDropdown(){
 	}
 }
 
+//dropdwon for updating customer image
 function customerImageDropdown(){
 	var dropdown5;
 	dropdown5 = document.getElementById("pickacustomer4");
@@ -47,6 +53,7 @@ function customerImageDropdown(){
 	}
 }
 
+//submits the form
 function getStuff(){
 	this.form.submit();
 }

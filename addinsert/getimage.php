@@ -1,9 +1,9 @@
 <!-- php script to check if customer has an image -->
 <?php
+include "connectdb.php";
 session_start();//starting a session to keep customer variable
 $_SESSION['customer']=$_POST["pickacustomer4"];
 
-include "connectdb.php";
 $customerId = $_POST["pickacustomer4"]; 
 $query = 'SELECT cusID, firstname, lastname, cusimage FROM customer WHERE
 	cusimage IS NOT NULL AND cusID="'.$customerId.'"'; //query for image

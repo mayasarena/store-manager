@@ -1,7 +1,12 @@
 <!DOCTYPE html>
+
+<!--  functional database updater with a fun user interface 
+Author: Maya Murad
+Student Number: 250850926
+-->
 <html>
 <head>
-	<title>TITLE</title>
+	<title>Assignment 3</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -11,7 +16,7 @@
 <a name="home"></a>
 <!-- header -->
 <div class="header">
-	<h1>DATABASE</h1>
+	<h1>DATABASES</h1>
   	<div class="header-links">
   		<a href="#home"><button class="btn">
 		<span class="text">home</span></button></a>
@@ -226,7 +231,9 @@
 	</div>
 	</div>
 </div>
-
+<?php
+mysqli_close($connection); //closing connection
+?>
 <!-- javascript -->
 <script src="index.js"></script>
 </body>

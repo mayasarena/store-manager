@@ -10,7 +10,7 @@ $result = mysqli_query($connection, $query);
 if (!$result) {//checking if query failed
  	die("databases query failed. ");
 }
-echo "<ul>"; //put the purcahses in an unordered bulleted list
+echo "<ul>"; //put the purchases in an unordered bulleted list
 if ($result->num_rows > 0) { //if customer has purchased anything
 	while ($row = mysqli_fetch_assoc($result)){
 		echo "<li>". "PRODUCT ID: " . $row["prodID"] . 

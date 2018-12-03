@@ -1,16 +1,17 @@
 /*
-stylesheet
+stylesheet mostly written by Maya Murad, student num: 250850926
 */
 
 /* body attributes */
 body {
 	font-family: verdana, sans-serif;
-	font-size: 11px;
+	font-size: 10px;
 	text-transform: uppercase;
 	background-color: #f1f1f1;
 	color: black;
 }
 
+/* header container */
 .header {
   	overflow: hidden;
   	background-color: white;
@@ -25,6 +26,7 @@ body {
 	z-index: 99;
 }
 
+/* header link container */
 .header-links {
 	position: absolute;
 	left: 25%;
@@ -56,6 +58,7 @@ h3 {
 	font-size: 20px;
 }
 
+/* pretty buttons */
 .h3 {
   	margin: 5px;
   	border: none;
@@ -72,21 +75,21 @@ h3 {
 }
 
 /* flex containers for website layout */
-.flex-title {
+.flex-title { /* child container that contains the title */
 	padding: 20px;
 }
 
-.flex-child {
+.flex-child { /* child flex containers */
 	flex: 0 0 350px;
 	padding: 20px;
 	opacity: 0.7;
 }
 
-.flex-child:hover{
-	opacity: 1;
+.flex-child:hover{ /* cool hover opacity effect on each container */
+	opacity: 1; /* so fun , so pretty @_@ */
 }
 
-.container {
+.container { /* sub container to further organize layout.. */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -96,7 +99,7 @@ h3 {
 	width: 250px;
 }
 
-.other-container {
+.other-container { /* sub other container to EVEN FURTHER organize layout */
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -106,8 +109,8 @@ h3 {
 	width: 350px;
 }
 
-.flex-container {
-  	margin-top: 145px;
+.flex-container { /* MAIN container that holds ALL the other containers */
+  	margin-top: 145px; /* -.- so many containers */
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -117,27 +120,9 @@ h3 {
 	width: 100%;
 }
 
-.flex-child2 {
-	flex: 0 0 100px;
-	padding: 20px;
-	padding-right: 45px;
-	height: 100%;
-	margiin: auto;
-}
-
-.flex-container2 {
-  	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: flex-start;
-	align-content: stretch;
-	height: 100%;
-	width: 100%;
-}
-
 /* button css class from: https://codepen.io/dan10gc/pen/EQbjgP  */
-.btn {
+/* because these buttons are super cool and i dont know how to do this */
+.btn { 
   	margin: 20px 20px;
   	border: none;
   	padding: 10px 44px;
@@ -150,7 +135,7 @@ h3 {
   	border-radius: 20px;
 }
 
-.btn::before {
+.btn::before { 
   	transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   	content: '';
   	width: 30%;
@@ -163,15 +148,15 @@ h3 {
 	border-radius: 50px;
 }
 
-.btn.gree::before {
+.btn.gree::before { /* different color buttons - this one is green */
 	background: #5cb85c;
 }
 
-.btn.yello::before {
+.btn.yello::before { /* this one is yellow ... */
 	background: #ffbf00;
 }
 
-.btn.blu::before {
+.btn.blu::before { /* this one is blue. rainbow :D */
 	background: #428bca;
 }
 
@@ -184,6 +169,6 @@ h3 {
   	color: black;
   	mix-blend-mode: multiply;
 }
-
+/* end of button class received from the internet */
 
 
